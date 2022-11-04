@@ -1,0 +1,38 @@
+html {
+  background: url("background.jpg");
+  background-size: cover;
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.keys {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.key {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: black 0.4rem solid;
+  border-radius: 0.5rem;
+  color: yellow;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  text-shadow: 0 0 0.5rem black;
+  width: 10rem;
+}
+
+kbd {
+  display: block;
+  color: white;
+  font-size: 4rem;
+}
