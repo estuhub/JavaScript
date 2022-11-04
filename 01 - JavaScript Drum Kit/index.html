@@ -58,12 +58,30 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
     <!-- add events to the kdb -->
     <script>
-      window.addEventListener("keydown", function(e) {
+      // function to play sound when keydown and adds class 'playing'
+      function playSound(e) {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         if (!audio) return; // stops the function from running
         audio.currentTime = 0; // indicates the position for the playback
         audio.play();
-      });
+        key.classList.add("playing");
+      }
+
+      // function to remove the class 'playing'
+      function removeTransition(e) {
+        if (e.propertyName != "transform") return; // skips it
+        console.log(this.classList.remove("playing"));
+      }
+
+      // selects all keys and removes the class 'playing' from each key
+      const keys = document.querySelectorAll(".key");
+      keys.forEach(key =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+
+      // DOM event to play sound when keydown and runs function
+      window.addEventListener("keydown", playSound);
     </script>
   </body>
 </html>
