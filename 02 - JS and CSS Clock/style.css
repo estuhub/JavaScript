@@ -2,7 +2,7 @@ html {
   background-image: url(./image/beach-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "helvetica";
+  font-family: "Roboto", sans-serif;
   font-size: 10px;
 }
 
@@ -17,28 +17,25 @@ body {
 }
 
 .clock {
-  border: 20px solid white;
-  border-radius: 50%;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border: 10px solid white;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
     inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
   height: 30rem;
+  justify-content: center;
   margin: 50px auto;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
-  width: 30rem;
+  width: 100rem;
 }
 
 .clock-face {
-  height: 100%;
-  position: relative;
-  transform: translateY(-3px); /* account for the height of the clock hands */
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .hand {
-  background: black;
-  height: 6px;
-  position: absolute;
-  top: 50%;
-  width: 50%;
+  font-size: 20rem;
 }
