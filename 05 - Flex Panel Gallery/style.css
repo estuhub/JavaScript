@@ -25,8 +25,8 @@ body {
 .panel {
   /* aligning */
   align-items: center;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -70,7 +70,6 @@ body {
   /* dom */
   transition: transform 0.5s;
   /* style */
-  border: 1px solid red;
   margin: 0;
   width: 100%;
 }
